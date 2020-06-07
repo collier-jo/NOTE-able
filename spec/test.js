@@ -10,6 +10,11 @@ it("Should read the a list of notes", function(){
   expect(test2.readAll()).toInclude("Hi");
 })
 
+it("NoteList should return an instance of note ", function(){
+  test2.list.push(test.readOne())
+  expect(test2.readAll()).toInclude("Hello");
+});
+
 
 
 // Uses the constructor and prototype pattern to define a note model object that can be instantiated.
