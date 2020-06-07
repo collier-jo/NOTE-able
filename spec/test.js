@@ -29,5 +29,5 @@ it("Creates and stores an instance of Note Model", function(){
 })
 
 it("Converts a string to HTML", function(){
-  expect(stringHTML.convert()).toEq("<h2> Hello <h2>")
+  expect(stringHTML.convert("h2")).toEq("<h2> Hello <h2>")
 })
