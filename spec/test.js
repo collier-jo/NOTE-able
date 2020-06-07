@@ -20,6 +20,13 @@ it("Adds a note instance to the array in NoteList", function(){
   expect(test2.readAll()).toInclude("Hello");
 });
 
+it("Creates and stores an instance of Note Model", function(){
+  test2.create("Howdy");
+  test2.create("Good'ay")
+  expect(test2.readAll()).toInclude("Howdy");
+  expect(test2.readAll()).toInclude("Good'ay");
+})
+
 
 
 // Uses the constructor and prototype pattern to define a note model object that can be instantiated.
