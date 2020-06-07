@@ -33,4 +33,18 @@ The last time I attempted this project I was able to create a front end app whic
 - Manipulating the DOM 
 - Event handlers 
 
+====
+
+What I learnt:
+
+(Expected:)
+
+
+
+(Unexpected:)
+
+- Constructor Pattern 
+- Prototype Pattern 
+- HTML Testing with own framework 
+- Converting strings to HTML 
 

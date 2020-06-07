@@ -1,5 +1,6 @@
 var test = new Note("Hello")
 var test2 = new NoteList
+var stringHTML = new HTMLConverter("Hello") 
 
 it("should print passed string", function() {
   expect(test.readOne()).toEq("Hello");
@@ -25,4 +26,8 @@ it("Creates and stores an instance of Note Model", function(){
   test2.create("Good'ay")
   expect(test2.readAll()).toInclude("Howdy");
   expect(test2.readAll()).toInclude("Good'ay");
+})
+
+it("Converts a string to HTML", function(){
+  expect(stringHTML.convert()).toEq("<h2> Hello <h2>")
 })
