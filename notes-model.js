@@ -2,9 +2,17 @@
 
 (function(exports) {
 
-  function notes(string) {
-    return string;
-  };
+  class Note {
+    constructor(text){
+      this.text = text;
+    } 
+    
+    readOne(){
+      return this.text;
+    };
+  }
 
-  exports.notes = notes;
+  exports.note = Note;
+
+
 })(this);

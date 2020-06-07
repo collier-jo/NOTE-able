@@ -1,3 +1,5 @@
+var note = new note("Hello")
+
 it("should print passed string", function() {
-  expect(notes("hello")).toEq("hello");
+  expect(note.readOne()).toEq("Hello");
 });
