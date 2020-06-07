@@ -26,9 +26,3 @@ it("Creates and stores an instance of Note Model", function(){
   expect(test2.readAll()).toInclude("Howdy");
   expect(test2.readAll()).toInclude("Good'ay");
 })
-
-
-
-// Uses the constructor and prototype pattern to define a note model object that can be instantiated.
-// Takes the text of a note upon instantiation e.g. My favourite language is JavaScript.
-// Stores the text in a text property on the note.
