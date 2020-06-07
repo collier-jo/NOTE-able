@@ -1,6 +1,7 @@
 var test = new Note("Hello")
 var test2 = new NoteList
 var stringHTML = new HTMLConverter("Hello") 
+var test3 = new NoteList
 
 it("should print passed string", function() {
   expect(test.readOne()).toEq("Hello");
@@ -33,8 +34,7 @@ it("Converts a string to HTML", function(){
 })
 
 it("NoteList converts all notes into HTML elements", function() {
-  test2.create("Good'ay")
-  console.log(test2.readAll())
-  console.log(test2.convertAllToHTML())
-  expect(test2.convertAllToHTML()).toEq("<ul><li><div>Good'ay</div></li></ul>")
+  test3.create("Good'ay")
+  console.log(test3.readAll())
+  expect(test3.convertAllToHTML()).toEq("<ul><li><div>Good'ay</div></li></ul>")
 })
