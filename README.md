@@ -35,7 +35,16 @@ The last time I attempted this project I was able to create a front end app whic
 
 ====
 
-What I learnt:
+## Domain Model
+
+
+## Input / Output Table
+
+
+## User Stories 
+
+
+## What I learnt:
 
 (Expected:)
 
@@ -47,4 +56,8 @@ What I learnt:
 - Prototype Pattern 
 - HTML Testing with own framework 
 - Converting strings to HTML 
+
+## Key Resources 
+
+
 

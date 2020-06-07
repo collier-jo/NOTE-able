@@ -31,3 +31,10 @@ it("Creates and stores an instance of Note Model", function(){
 it("Converts a string to HTML", function(){
   expect(stringHTML.convert("h2")).toEq("<h2> Hello <h2>")
 })
+
+it("NoteList converts all notes into HTML elements", function() {
+  test2.create("Good'ay")
+  console.log(test2.readAll())
+  console.log(test2.convertAllToHTML())
+  expect(test2.convertAllToHTML()).toEq("<ul><li><div>Good'ay</div></li></ul>")
+})
