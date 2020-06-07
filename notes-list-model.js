@@ -13,6 +13,14 @@
 
 (function(exports) {
 
+  function NoteList() {
+    this.list = []
+  }
 
+  NoteList.prototype.readAll = function(){
+    return this.list
+  } 
+
+  exports.NoteList = NoteList;
 
 })(this);
