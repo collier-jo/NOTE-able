@@ -44,5 +44,14 @@ it("NoteList converts this.list.length === 2 into HTML elements", function() {
   test3.create("Hello")
 
   expect(test3.convertAllToHTML()).toEq("<ul><li><div>Gooday</div></li><li><div>Hello</div></li></ul>")
-  console.log(test3.convertAllToHTML())
 })
+
+it("NoteList converts this.list.length === 3 into HTML elements", function() {
+  test3.list = []
+  test3.create("Gooday")
+  test3.create("Hello")
+  test3.create("Howdy")
+
+  expect(test3.convertAllToHTML()).toEq("<ul><li><div>Gooday</div></li><li><div>Hello</div></li><li><div>Howdy</div></li></ul>")
+})
+
