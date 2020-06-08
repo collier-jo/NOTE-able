@@ -33,8 +33,16 @@ it("Converts a string to HTML", function(){
   expect(stringHTML.convert("h2")).toEq("<h2> Hello <h2>")
 })
 
-it("NoteList converts all notes into HTML elements", function() {
+it("NoteList converts this.list.length === 1 into HTML elements", function() {
   test3.create("Good'ay")
-  console.log(test3.readAll())
   expect(test3.convertAllToHTML()).toEq("<ul><li><div>Good'ay</div></li></ul>")
+})
+
+it("NoteList converts this.list.length === 2 into HTML elements", function() {
+  test3.list = []
+  test3.create("Gooday")
+  test3.create("Hello")
+
+  expect(test3.convertAllToHTML()).toEq("<ul><li><div>Gooday</div></li><li><div>Hello</div></li></ul>")
+  console.log(test3.convertAllToHTML())
 })
