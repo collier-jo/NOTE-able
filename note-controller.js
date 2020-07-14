@@ -35,8 +35,3 @@ test.addToPage()
 
 
 
-// Takes a note list model as a parameter. √
-// Adds a note that says Favourite drink: seltzer. √
-// Creates a note list view, passing in the note list model.
-// The note controller has a method that gets HTML from the 
-// note list view and inserts it into the app element.
