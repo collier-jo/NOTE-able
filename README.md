@@ -76,6 +76,16 @@ As a programmer,
 So I can create a single page app
 I would like the programme to have a HTTP Server 
 
+## Install:
+Node:
+- Node --v 
+    if bash command not found
+- $ brew install node
+- npm init 
+    to create a package.json to keep track of depenancies 
+- In package.json 
+
+
 ## What I learnt:
 
 (Expected:)
@@ -93,3 +103,9 @@ I would like the programme to have a HTTP Server
 
 
 
+Create an index.html file containing the minimal HTML structure. / 
+ Add a div that has an id attribute set to app and contains the text hello./
+ Install 💊 node./
+ Install http-server from 💊 npm./
+ Run http-server to serve your index.html.s
+ Go to http://localhost:8080/ in a browser to view your index.html page. It should say hello.

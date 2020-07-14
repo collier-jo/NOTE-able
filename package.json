@@ -1,0 +1,22 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "## Aims - To create a single page app - To understand front end MVC  - To use node  - Have a better understanding of asynchronous behaviour in JS  - To diagram the flow how all parts of the app interact",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collier-jo/NotesAppVersion2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/collier-jo/NotesAppVersion2/issues"
+  },
+  "homepage": "https://github.com/collier-jo/NotesAppVersion2#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
