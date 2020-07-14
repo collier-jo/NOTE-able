@@ -9,8 +9,6 @@
 console.log("Controller Spec")
 
 var noteListdouble = {
-  list: [],
-
   create: function(text){
     return text
   },
