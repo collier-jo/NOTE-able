@@ -12,36 +12,19 @@ var noteListdouble = {
   list: [],
 
   create: function(text){
-    this.list.push(text)
-    return this.list
+    return text
   },
-
   convertAllToHTML: function(){
-    var arr = this.list
-    var html = ["<ul>"]
-
-    for(var index = 0; index < arr.length; index ++){
-      var string = arr[index].toString()
-      html.push(`<li><div>${string}</div></li>`)
-    }
-
-    html.push("</ul>")
-    var stringHtml = html.join("")
-  
-    return stringHtml
+   return "<ul><li><div>Hello</div></li></ul>"
   }
 };
 
 var controllerTest = new NoteController(noteListdouble)
 
 it("Should add to the list array", function(){
-  expect(controllerTest.add("Hello")).toInclude("Hello");
+  expect(controllerTest.add("Hello")).toEq("Hello");
 }); 
 
-it("Should interact with the convertAllToHTML method", function(){
-  expect(controllerTest.view()).toEq("<ul><li><div>Hello</div></li></ul>")
-  console.log(controllerTest.addToPage())
-})
 
 it("Should fill the innerHTML", function(){
   expect(controllerTest.addToPage()).toEq("<ul><li><div>Hello</div></li></ul>")
