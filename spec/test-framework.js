@@ -1,4 +1,5 @@
 var hasBeenCalled = {}
+var hasBeenCalledWith = {}
 
 function it(label, callback) {
     console.log("Test: " + label)
@@ -25,7 +26,6 @@ function it(label, callback) {
           console.log("Fail")
         }
       },
-  
       toInclude: function(b){
         if(a.includes(b)){
           console.log("Pass")
@@ -33,11 +33,15 @@ function it(label, callback) {
           console.log("Fail")
         }
       },
-
       toHaveBeenCalled: function(){
-        console.log(hasBeenCalled)
-        console.log(a.name)
         if(hasBeenCalled[a.name] === 1){
+          console.log("Pass")
+        } else {
+          console.log("Fail")
+        }
+      }, 
+      toHaveBeenCalledWith: function(b){ 
+        if(hasBeenCalledWith[a.name].includes(b)){
           console.log("Pass")
         } else {
           console.log("Fail")
@@ -45,3 +49,5 @@ function it(label, callback) {
       }
     }
   }
+
+  /// chnage to errors rather than if else 
