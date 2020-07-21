@@ -36,21 +36,20 @@ it("CovertAllToHTML is called", function(){
 
 })
 
-// it("Adds text to innerHTML", function(){
-//   const saveGetElementById = document.getElementById("app")
-//   let doubleDiv = {innerHTML: undefined}
-//   document.getElementById = () => doubleDiv
+it("Adds text to innerHTML", function(){
+  const saveGetElementById = document.getElementById
+  let doubleDiv = {innerHTML: undefined}
+  document.getElementById = () => doubleDiv
 
-//   noteListdouble = {
-//     convertAllToHTML: function(){
-//       return "<ul><li><div>Hello</div></li></ul>"
-//     }
-//   }
+  noteListdouble = {
+    convertAllToHTML: function(){
+      return "<ul><li><div>Hello</div></li></ul>"
+    }
+  }
 
-//   var controllerTest = new NoteController(noteListdouble)
+  var controllerTest = new NoteController(noteListdouble)
 
-//   // expect(controllerTest.addToPage()).toEq("Hello")
-//   console.log(saveGetElementById)
+  expect(controllerTest.addToPage()).toEq("<ul><li><div>Hello</div></li></ul>")
    
-//   document.getElementById = saveGetElementById
-// })
+  document.getElementById = saveGetElementById
+})
