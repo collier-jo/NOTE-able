@@ -25,26 +25,6 @@ it("Creates and stores an instance of Note Model", function(){
   expect(test2.readAll()).toInclude("Good'ay");
 })
 
-it("NoteList converts this.list.length === 1 into HTML elements", function() {
-  test3.create("Good'ay")
-  expect(test3.convertAllToHTML()).toEq("<ul><li><div>Good'ay</div></li></ul>")
-})
 
-it("NoteList converts this.list.length === 2 into HTML elements", function() {
-  test3.list = []
-  test3.create("Gooday")
-  test3.create("Hello")
-
-  expect(test3.convertAllToHTML()).toEq("<ul><li><div>Gooday</div></li><li><div>Hello</div></li></ul>")
-})
-
-it("NoteList converts this.list.length === 3 into HTML elements", function() {
-  test3.list = []
-  test3.create("Gooday")
-  test3.create("Hello")
-  test3.create("Howdy")
-
-  expect(test3.convertAllToHTML()).toEq("<ul><li><div>Gooday</div></li><li><div>Hello</div></li><li><div>Howdy</div></li></ul>")
-})
   
   

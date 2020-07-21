@@ -20,21 +20,6 @@
     this.add(note)
   }
 
-  NoteList.prototype.convertAllToHTML = function(){
-    var arr = this.list
-    var html = ["<ul>"]
-
-    for(var index = 0; index < arr.length; index ++){
-      var string = arr[index].toString()
-      html.push(`<li><div>${string}</div></li>`)
-    }
-
-    html.push("</ul>")
-    var stringHtml = html.join("")
-  
-    return stringHtml
-  }
-
   exports.NoteList = NoteList;
 
 })(this);
