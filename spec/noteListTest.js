@@ -7,11 +7,11 @@ it("Should read the a list of notes", function(){
 })
 
 it("Adds a note instance to the array in NoteList", function(){
-  var note = {text: "Hello"}
+  var note = {text: "Hello", id: 0}
   var test2 = new NoteList
   test2.add(note); 
 
-  expect(test2.list).toInclude("Hello");
+  expect(test2.list[0]).toHaveValue("Hello");
 });
 
 it("Updates the noteID by 1", function(){

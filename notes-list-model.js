@@ -8,8 +8,7 @@
   }
 
   NoteList.prototype.add = function(note){
-    var extractedNoteText = note.text
-    this.list.push(extractedNoteText)
+    this.list.push(note)
   } 
 
   NoteList.prototype.readAll = function(){
