@@ -60,7 +60,7 @@ it("converts length === 2 into HTML elements with ID", function() {
   
   let noteView = new NoteView(noteListDouble)
 
-  expect(noteView.convertAllToHTML()).toEq("<ul><li><div id=0>I am a fake note</div></li><li><div id=1>I am a second fake note</div></li></ul>")
+  expect(noteView.convertAllToHTML()).toEq("<ul><li><div id=0>I am a fake note</div></li><li><div id=1>I am a second fake n</div></li></ul>")
 })
 
 

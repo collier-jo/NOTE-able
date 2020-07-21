@@ -2,7 +2,6 @@
 
 (function(exports) {
 
-
   function NoteController(list = new NoteList){
     this.list = list
   };
