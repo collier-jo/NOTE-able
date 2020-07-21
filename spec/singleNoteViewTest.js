@@ -1,13 +1,20 @@
 
-var noteDouble = {
-  readOne: function(){
-    return "I am a fake note"
+
+
+it("Read One has been called ", function(){
+  let noteDouble = {
+    readOne: function(){
+      hasBeenCalled["readOne"] = 1
+    }
   }
-}
 
+  let singleNote = new SingleNoteView(noteDouble)
+  singleNote.view()
 
-var singleNote = new SingleNoteView(noteDouble)
-
-it("Returns text as HTML", function(){
-  expect(singleNote.view()).toEq("<div>I am a fake note</div>");
+  expect(noteDouble.readOne).toHaveBeenCalled();
 }); 
+
+
+
+
+
