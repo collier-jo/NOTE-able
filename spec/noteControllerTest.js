@@ -27,34 +27,31 @@ it("CovertAllToHTML is called", function(){
   }
 
   var controllerTest = new NoteController()
-
   controllerTest.addToPage(noteViewDoube)
 
   expect(noteViewDoube.convertAllToHTML).toHaveBeenCalled()
 
   document.getElementById = saveGetElementById
-
-
 })
 
 
 
 
 
-// it("Adds text to innerHTML", function(){
-//   const saveGetElementById = document.getElementById
-//   let doubleDiv = {innerHTML: undefined}
-//   document.getElementById = () => doubleDiv
+it("Adds text to innerHTML", function(){
+  const saveGetElementById = document.getElementById
+  let doubleDiv = {innerHTML: undefined}
+  document.getElementById = () => doubleDiv
 
-//   noteListdouble = {
-//     convertAllToHTML: function(){
-//       return "<ul><li><div>Hello</div></li></ul>"
-//     }
-//   }
+  noteListdouble = {
+    convertAllToHTML: function(){
+      return "<ul><li><div>Hello</div></li></ul>"
+    }
+  }
 
-//   var controllerTest = new NoteController(noteListdouble)
+  var controllerTest = new NoteController()
 
-//   expect(controllerTest.addToPage()).toEq("<ul><li><div>Hello</div></li></ul>")
-   
-//   document.getElementById = saveGetElementById
-// })
+  expect(controllerTest.addToPage(noteListdouble)).toEq("<ul><li><div>Hello</div></li></ul>")
+
+  document.getElementById = saveGetElementById
+})

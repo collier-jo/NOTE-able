@@ -12,9 +12,7 @@
   };
 
 
-  NoteController.prototype.addToPage = function(noteView = new NoteView(this.list)) {
-    console.log(noteView)
-    
+  NoteController.prototype.addToPage = function(noteView = new NoteView(this.list)) {  
     var insertNotesToPage = document.getElementById("app")   
     insertNotesToPage.innerHTML = noteView.convertAllToHTML()
     return insertNotesToPage.innerHTML
