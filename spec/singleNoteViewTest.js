@@ -1,3 +1,5 @@
+console.log("Single Note View")
+
 it("Read One has been called ", function(){
   let noteDouble = {
     readOne: function(){

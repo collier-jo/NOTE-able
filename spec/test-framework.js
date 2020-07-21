@@ -34,7 +34,7 @@ function it(label, callback) {
         }
       },
       toHaveBeenCalled: function(){
-        if(hasBeenCalled[a.name] === 1){
+        if(hasBeenCalled[a.name] >= 1){
           console.log("Pass")
         } else {
           console.log("Fail")

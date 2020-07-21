@@ -1,5 +1,5 @@
 
-console.log("Controller Spec")
+console.log("Controller Spec!!!!!!!!!!!!!!!!!!!")
 
 it("Create is called", function(){
   var noteListdouble = {
@@ -19,37 +19,42 @@ it("CovertAllToHTML is called", function(){
   let doubleDiv = {innerHTML: undefined}
   document.getElementById = () => doubleDiv
 
-
-
-  var noteListdouble = {
+  var noteViewDoube = {
     convertAllToHTML: function(){
       hasBeenCalled["convertAllToHTML"] = 1
-    }
-  };
-  // spyOn(noteListdouble, "convertAllToHTML")
-  var controllerTest = new NoteController(noteListdouble)
-  controllerTest.addToPage()
-  expect(noteListdouble.convertAllToHTML).toHaveBeenCalled()
-
-  document.getElementById = saveGetElementById
-
-
-})
-
-it("Adds text to innerHTML", function(){
-  const saveGetElementById = document.getElementById
-  let doubleDiv = {innerHTML: undefined}
-  document.getElementById = () => doubleDiv
-
-  noteListdouble = {
-    convertAllToHTML: function(){
-      return "<ul><li><div>Hello</div></li></ul>"
+      return "Hello"
     }
   }
 
-  var controllerTest = new NoteController(noteListdouble)
+  var controllerTest = new NoteController()
 
-  expect(controllerTest.addToPage()).toEq("<ul><li><div>Hello</div></li></ul>")
-   
+  controllerTest.addToPage(noteViewDoube)
+
+  expect(noteViewDoube.convertAllToHTML).toHaveBeenCalled()
+
   document.getElementById = saveGetElementById
+
+
 })
+
+
+
+
+
+// it("Adds text to innerHTML", function(){
+//   const saveGetElementById = document.getElementById
+//   let doubleDiv = {innerHTML: undefined}
+//   document.getElementById = () => doubleDiv
+
+//   noteListdouble = {
+//     convertAllToHTML: function(){
+//       return "<ul><li><div>Hello</div></li></ul>"
+//     }
+//   }
+
+//   var controllerTest = new NoteController(noteListdouble)
+
+//   expect(controllerTest.addToPage()).toEq("<ul><li><div>Hello</div></li></ul>")
+   
+//   document.getElementById = saveGetElementById
+// })
