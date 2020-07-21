@@ -1,6 +1,3 @@
-
-
-
 it("Read One has been called ", function(){
   let noteDouble = {
     readOne: function(){
@@ -14,7 +11,18 @@ it("Read One has been called ", function(){
   expect(noteDouble.readOne).toHaveBeenCalled();
 }); 
 
+it("Returns text as HTML", function(){
+
+  let noteDouble = {
+    readOne: function(){
+      return "I am a fake note"
+    }
+  }
+
+  let singleNote = new SingleNoteView(noteDouble)
 
 
+  expect(singleNote.view()).toEq("<div>I am a fake note</div>");
+}); 
 
 
