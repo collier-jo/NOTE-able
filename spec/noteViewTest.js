@@ -50,4 +50,18 @@ it("converts length === 1 into HTML elements", function() {
 })
 
 
+it("converts length === 2 into HTML elements with ID", function() {
+  let noteListDouble = {
+    readAll: function(){
+      var array = ["I am a fake note", "I am a second fake note"]
+      return array
+    }
+  }
+  
+  let noteView = new NoteView(noteListDouble)
+
+  expect(noteView.convertAllToHTML()).toEq("<ul><li><div id=0>I am a fake note</div></li><li><div id=1>I am a second fake note</div></li></ul>")
+})
+
+
 
