@@ -4,6 +4,7 @@
 
   function NoteList() {
     this.list = []
+    this.noteID = 0
   }
 
   NoteList.prototype.add = function(note){
@@ -16,8 +17,13 @@
   } 
 
   NoteList.prototype.create = function(text){
-    var note = new Note(text)
-    this.add(note)
+    var note = new Note(text, this.noteID)
+    this._noteID()
+    return note
+  }
+
+  NoteList.prototype._noteID = function() {
+    this.noteID ++ 
   }
 
   exports.NoteList = NoteList;

@@ -1,7 +1,6 @@
 console.log("Note Spec")
 
-var test = new Note("Hello")
-
 it("should print passed string", function() {
+    var test = new Note("Hello", 1)
     expect(test.readOne()).toEq("Hello");
 });

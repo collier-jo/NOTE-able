@@ -46,6 +46,13 @@ function it(label, callback) {
         } else {
           console.log("Fail")
         }
+      },
+      toHaveValue: function(b){
+        if(Object.values(a).includes(b)){
+          console.log("Pass")
+        } else {
+          console.log("Fail")
+        }
       }
     }
   }
