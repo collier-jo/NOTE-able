@@ -35,7 +35,19 @@ it("Ensures .readAll is called", function() {
 })
 
 
+it("converts length === 1 into HTML elements", function() {
+  
+  let noteListDouble = {
+    readAll: function(){
+      var array = ["I am a fake note"]
+      return array
+    }
+  }
+  
+  let noteView = new NoteView(noteListDouble)
 
+  expect(noteView.convertAllToHTML()).toEq("<ul><li><div id=0>I am a fake note</div></li></ul>")
+})
 
 
 
