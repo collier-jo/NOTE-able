@@ -25,7 +25,7 @@
   NoteView.prototype._shortNote = function(string){
     return string.substring(0,20)
   }
-
+  
   exports.NoteView = NoteView;
 
 })(this);
