@@ -1,24 +1,3 @@
-// it("NoteList converts this.list.length === 1 into HTML elements", function() {
-//   test3.create("Good'ay")
-//   expect(test3.convertAllToHTML()).toEq("<ul><li><div>Good'ay</div></li></ul>")
-// })
-
-// it("NoteList converts this.list.length === 2 into HTML elements", function() {
-//   test3.list = []
-//   test3.create("Gooday")
-//   test3.create("Hello")
-
-//   expect(test3.convertAllToHTML()).toEq("<ul><li><div>Gooday</div></li><li><div>Hello</div></li></ul>")
-// })
-
-// it("NoteList converts this.list.length === 3 into HTML elements", function() {
-//   test3.list = []
-//   test3.create("Gooday")
-//   test3.create("Hello")
-//   test3.create("Howdy")
-
-//   expect(test3.convertAllToHTML()).toEq("<ul><li><div>Gooday</div></li><li><div>Hello</div></li><li><div>Howdy</div></li></ul>")
-// })
 
 console.log("Note View")
 
@@ -39,28 +18,30 @@ it("converts length === 1 into HTML elements", function() {
   
   let noteListDouble = {
     readAll: function(){
-      var array = [{text: "I am a fake note"}]
+      var array = [{text: "I am a fake note", id: 0}]
       return array
     }
   }
   
   let noteView = new NoteView(noteListDouble)
 
-  expect(noteView.convertAllToHTML()).toEq("<ul><li><div id=0>I am a fake note</div></li></ul>")
+  console.log(noteView.convertAllToHTML())
+
+  expect(noteView.convertAllToHTML()).toEq("<ul><li><a href=#notes/0 id=0>I am a fake note</a></li></ul>")
 })
 
 
 it("converts length === 2 into HTML elements with ID", function() {
   let noteListDouble = {
     readAll: function(){
-      var array = [{text: "I am a fake note"},{ text: "I am a second fake note"}]
+      var array = [{text: "I am a fake note", id: 0},{ text: "I am a second fake note", id: 1}]
       return array
     }
   }
   
   let noteView = new NoteView(noteListDouble)
   
-  expect(noteView.convertAllToHTML()).toEq("<ul><li><div id=0>I am a fake note</div></li><li><div id=1>I am a second fake n</div></li></ul>")
+  expect(noteView.convertAllToHTML()).toEq("<ul><li><a href=#notes/0 id=0>I am a fake note</a></li><li><a href=#notes/1 id=1>I am a second fake n</a></li></ul>")
 })
 
 
