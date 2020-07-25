@@ -8,6 +8,7 @@
   };
   
   NoteController.prototype.add = function(text){
+    console.log(this.list)
     return this.list.create(text)    
   };
 
@@ -31,18 +32,24 @@
       let noteID = location.hash.split("#notes/")[1]
       console.log(list.list[0])
 
-      insertSingleNote.innerHTML = list.list[noteID].text
-      
-      
+      insertSingleNote.innerHTML = list.list[noteID].tex
    
     }, false);
   }
-  
+
+  NoteController.prototype.logSubmit = function(){
+
+    let submitForm = document.getElementById("form");
+      
+    submitForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var text = document.getElementById("text-area").value
+      return event.srcElement.children[0].value
+    })
+  }
+
+
   exports.NoteController = NoteController;
+ 
 
 })(this);
-
-
-// what am i testing here 
-// that this is triggered when the hash is changed 
-// that the div is filled correctly 
