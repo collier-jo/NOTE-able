@@ -1,7 +1,6 @@
 "use strict";
 (function(exports) {
 
-
   function NoteController(list = new NoteList){
     this.list = list
     this.note = ""
@@ -32,7 +31,6 @@
   }
 
   NoteController.prototype.logSubmit = function(){
-
     event.preventDefault()
     let newNote = document.getElementById("text-area").value
     this.add(newNote)
@@ -43,3 +41,5 @@
  
 
 })(this);
+
+
