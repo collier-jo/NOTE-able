@@ -8,6 +8,7 @@
   }
 
   NoteList.prototype._add = function(note){
+
     this.list.push(note)
   } 
 
@@ -17,6 +18,7 @@
 
   NoteList.prototype.create = function(text){
     var note = new Note(text, this.noteID)
+
     this._noteID()
     this._add(note)
     return note

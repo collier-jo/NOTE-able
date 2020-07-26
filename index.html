@@ -12,17 +12,21 @@
 <script src="note-controller.js"></script>
 <script src="single-note-view.js"></script>
 
-  <form id="form" class="" action="#notes/new" method="post">
-    <input type="text" name="text" id="text-area" placeholder="What is NOTE-able today?">
-    <input type="submit" name="submit">
-  </form>
-
-  <script> 
-    test = new NoteController
-    test.logSubmit()
+  <script type="text/javascript">
+    let noteList = new NoteList
+    let noteController = new NoteController(noteList)
   </script>
+
+  <form id="form" class="" onsubmit="return noteController.logSubmit()">
+    <input type="text" name="text" id="text-area" placeholder="What is NOTE-able today?">
+    <input type="submit" name="submit" id="submit">
+  </form>
 
   <div id="single-note"></div>
   <div id="app"></div>
 
+
+
 </html>
+
+

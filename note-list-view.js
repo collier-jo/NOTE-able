@@ -14,7 +14,7 @@
       var string = this.noteList[index]["text"]
       var shortHand = this._shortNote(string)
       var id = this.noteList[index]["id"]
-      html.push(`<li><a href=#notes/${id} id=${id}>${shortHand}</a></li>`)
+      html.push(`<li><a href=#notes/${id} id=${id}>${shortHand} ... </a></li>`)
     }
   
     html.push("</ul>")
